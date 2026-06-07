@@ -1,0 +1,180 @@
+@import 'tailwindcss';
+
+@theme {
+  /* StraViTech brand palette (Deep Navy, Teal, Bright Cyan) */
+  --color-paper: #f5f7fa;
+  --color-card: #ffffff;
+  --color-ink: #001f4b; /* Darkest Navy — headlines / text */
+  --color-carbon: #013e6b;
+  --color-slate-muted: #5b6b7c; /* muted body */
+  --color-mist: #dde5ec;
+  --color-fog: #9aa9b8;
+  --color-graphite: #0d2438;
+  --color-indigo-brand: #013e6b; /* Deep Navy — primary */
+  --color-ember: #008aaf; /* (legacy slot) Teal */
+  --color-midnight-teal: #001f4b;
+  --color-forest-teal: #008aaf; /* Teal — secondary / the bridge */
+  --color-sky: #12a5c9; /* Bright Cyan — accent */
+  --color-cyan-pale: #d6eef5; /* light cyan — pill backgrounds */
+  --color-mint: #12a5c9;
+  --color-lavender: #008aaf;
+
+  /* Fonts — Sora for headings, Inter for body (brand-locked) */
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Sora', 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  /* Type scale */
+  --text-caption: 12px;
+  --text-caption--line-height: 1.5;
+  --text-body-sm: 14px;
+  --text-body-sm--line-height: 1.5;
+  --text-body: 16px;
+  --text-body--line-height: 1.5;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 1.43;
+  --text-body-lg--letter-spacing: -0.18px;
+  --text-subheading: 20px;
+  --text-subheading--line-height: 1.38;
+  --text-subheading--letter-spacing: -0.2px;
+  --text-heading-sm: 24px;
+  --text-heading-sm--line-height: 1.33;
+  --text-heading-sm--letter-spacing: -0.48px;
+  --text-heading: 28px;
+  --text-heading--line-height: 1.3;
+  --text-heading--letter-spacing: -0.56px;
+  --text-heading-lg: 40px;
+  --text-heading-lg--line-height: 1.1;
+  --text-heading-lg--letter-spacing: -0.8px;
+  --text-display: 60px;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -1.8px;
+
+  /* Radii */
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --radius-2xl: 16px;
+
+  /* Shadows */
+  --shadow-card: rgba(17, 26, 74, 0.1) 0px 1px 3px 0px, rgba(17, 26, 74, 0.05) 0px 1px 0px 0px, rgba(255, 255, 255, 0.5) 0px 1px 0px 0px inset;
+  --shadow-float: rgba(0, 0, 0, 0.02) 0px 40px 32px 0px, rgba(0, 0, 0, 0.03) 0px 22px 18px 0px, rgba(0, 0, 0, 0.03) 0px 12px 10px 0px, rgba(0, 0, 0, 0.04) 0px 7px 5px 0px, rgba(0, 0, 0, 0.07) 0px 3px 2px 0px;
+  --shadow-btn-hover: rgba(0, 0, 0, 0.05) 0px 4px 8px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html,
+  body {
+    overflow-x: clip;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+}
+
+@utility max-w-container {
+  max-width: 1200px;
+}
+
+@utility glass {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+@utility dot-field {
+  background-image: radial-gradient(circle, rgba(17, 26, 74, 0.1) 1.4px, transparent 1.5px);
+  background-size: 16px 16px;
+}
+
+@utility grid-lines {
+  background-image:
+    linear-gradient(to right, rgba(17, 26, 74, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(17, 26, 74, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+@utility bloom {
+  background:
+    radial-gradient(40% 60% at 85% 0%, rgba(18, 165, 201, 0.14), transparent 70%),
+    radial-gradient(40% 50% at 0% 10%, rgba(0, 138, 175, 0.12), transparent 70%);
+}
+
+@keyframes meshShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 200% 50%; }
+}
+
+/* Animated light mesh-gradient */
+@utility mesh {
+  background-color: #f6f6f8;
+  background-image:
+    radial-gradient(at 18% 18%, rgba(126, 167, 233, 0.55) 0px, transparent 50%),
+    radial-gradient(at 82% 12%, rgba(193, 232, 239, 0.7) 0px, transparent 50%),
+    radial-gradient(at 72% 82%, rgba(159, 122, 238, 0.35) 0px, transparent 50%),
+    radial-gradient(at 8% 88%, rgba(68, 180, 139, 0.3) 0px, transparent 50%);
+  background-size: 180% 180%;
+  animation: meshShift 18s ease-in-out infinite;
+}
+
+/* Bold dark mesh-gradient (CTA band) */
+@utility mesh-dark {
+  background-color: #001f4b;
+  background-image:
+    radial-gradient(at 14% 20%, rgba(1, 62, 107, 0.85) 0px, transparent 50%),
+    radial-gradient(at 86% 14%, rgba(18, 165, 201, 0.5) 0px, transparent 50%),
+    radial-gradient(at 76% 86%, rgba(0, 138, 175, 0.5) 0px, transparent 50%),
+    radial-gradient(at 8% 90%, rgba(18, 165, 201, 0.3) 0px, transparent 45%);
+  background-size: 180% 180%;
+  animation: meshShift 16s ease-in-out infinite;
+}
+
+/* Subtle film grain overlay */
+@utility grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+}
+
+/* Animated gradient text */
+@utility text-shimmer {
+  background: linear-gradient(90deg, #013e6b, #008aaf, #12a5c9, #008aaf, #013e6b);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: shimmer 6s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mesh,
+  .mesh-dark,
+  .text-shimmer {
+    animation: none !important;
+  }
+}

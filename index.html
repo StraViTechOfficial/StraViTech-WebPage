@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html class="light" lang="en">
+<html class="scroll-smooth" lang="en">
 
 <head>
     <meta charset="utf-8" />
@@ -27,107 +27,67 @@
     <meta name="twitter:title" content="StraViTech | Accelerating Business Innovation" />
     <meta name="twitter:description"
         content="Transform your business with StraViTech's custom software, AI integration, and enterprise-ready digital solutions." />
-    <meta name="twitter:image"
-        content="https://lh3.googleusercontent.com/aida-public/AB6AXuAwr6pn5xQr_L_paTTAqh4WQiypkeTdjldlIWo9GQASBT3vZpprk9CtjPR20XPjGDNVS4fc8xVXGq-TzI70ZUEjSjcUMaSd1n3BEIi8bb0Cyffw_TyaEiHI9DsZAXLNgscYOWuZm5obtkpKhdXvOJsGMiEtUMKtXrrpbhrxa0nFgfG3ezxmrdZngbxJmYm39Au6PGrqehN5XSQLzo093UDg89Z0HSM37lCwlACL5N58kTJBh1W0BVKnKsTfNCviigVTo12N4PfaCdY" />
     <title>StraViTech | Accelerating Business Innovation</title>
+
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
-        rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
         rel="stylesheet" />
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
         rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
-            darkMode: "class",
             theme: {
                 extend: {
-                    "colors": {
-                        "primary": "#00162a",
-                        "on-surface": "#0b1c30",
-                        "on-surface-variant": "#43474d",
-                        "on-tertiary-container": "#8e9193",
-                        "surface-dim": "#cbdbf5",
-                        "on-tertiary-fixed": "#191c1e",
-                        "surface-container-highest": "#d3e4fe",
-                        "secondary": "#00677d",
-                        "surface-bright": "#f8f9ff",
-                        "on-background": "#0b1c30",
-                        "on-error-container": "#93000a",
-                        "secondary-fixed-dim": "#5cd5f8",
-                        "surface": "#f8f9ff",
-                        "primary-fixed": "#d0e4ff",
-                        "tertiary-fixed-dim": "#c4c7c9",
-                        "background": "#f8f9ff",
-                        "surface-container": "#e5eeff",
-                        "on-primary": "#ffffff",
-                        "tertiary-fixed": "#e0e3e5",
-                        "surface-variant": "#d3e4fe",
-                        "inverse-surface": "#213145",
-                        "inverse-on-surface": "#eaf1ff",
-                        "primary-container": "#0d2b45",
-                        "surface-container-low": "#eff4ff",
-                        "secondary-container": "#63dbfe",
-                        "primary-fixed-dim": "#aec9ea",
-                        "inverse-primary": "#aec9ea",
-                        "outline": "#73777e",
-                        "surface-container-high": "#dce9ff",
-                        "on-secondary-container": "#005e73",
-                        "outline-variant": "#c3c6ce",
-                        "error": "#ba1a1a",
-                        "on-tertiary-fixed-variant": "#444749",
-                        "on-primary-fixed": "#001d35",
-                        "on-secondary-fixed-variant": "#004e5f",
-                        "surface-tint": "#46607d",
-                        "on-error": "#ffffff",
-                        "error-container": "#ffdad6",
-                        "tertiary-container": "#262a2c",
-                        "on-tertiary": "#ffffff",
-                        "on-secondary-fixed": "#001f27",
-                        "tertiary": "#121617",
-                        "on-primary-fixed-variant": "#2e4964",
-                        "on-primary-container": "#7893b2",
-                        "on-secondary": "#ffffff",
-                        "surface-container-lowest": "#ffffff",
-                        "secondary-fixed": "#b3ebff"
+                    colors: {
+                        "paper": "#f6f6f8",
+                        "card": "#ffffff",
+                        "ink": "#011821",
+                        "carbon": "#12161e",
+                        "slate-muted": "#7c7f88",
+                        "mist": "#e3e4e8",
+                        "fog": "#a9acb6",
+                        "graphite": "#3b3e47",
+                        "indigo-brand": "#111a4a",
+                        "ember": "#ec652b",
+                        "midnight-teal": "#023247",
+                        "forest-teal": "#167e6c",
+                        "sky": "#7ea7e9",
+                        "cyan-pale": "#c1e8ef",
+                        "mint": "#44b48b",
+                        "lavender": "#9f7aee"
                     },
-                    "borderRadius": {
-                        "DEFAULT": "0.125rem",
-                        "lg": "0.25rem",
-                        "xl": "0.5rem",
-                        "full": "0.75rem"
+                    fontFamily: {
+                        sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+                        mono: ["'JetBrains Mono'", "ui-monospace", "monospace"]
                     },
-                    "spacing": {
-                        "stack-md": "16px",
-                        "stack-lg": "32px",
-                        "margin-mobile": "16px",
-                        "unit": "8px",
-                        "stack-sm": "8px",
-                        "margin-desktop": "48px",
-                        "gutter": "24px",
-                        "container-max": "1280px"
+                    fontSize: {
+                        "caption": ["12px", { lineHeight: "1.5" }],
+                        "body-sm": ["14px", { lineHeight: "1.5" }],
+                        "body": ["16px", { lineHeight: "1.5" }],
+                        "body-lg": ["18px", { lineHeight: "1.43", letterSpacing: "-0.18px" }],
+                        "subheading": ["20px", { lineHeight: "1.38", letterSpacing: "-0.2px" }],
+                        "heading-sm": ["24px", { lineHeight: "1.33", letterSpacing: "-0.48px" }],
+                        "heading": ["28px", { lineHeight: "1.3", letterSpacing: "-0.56px" }],
+                        "heading-lg": ["40px", { lineHeight: "1.1", letterSpacing: "-0.8px" }],
+                        "display": ["60px", { lineHeight: "1.05", letterSpacing: "-1.8px" }]
                     },
-                    "fontFamily": {
-                        "headline-md": ["Inter"],
-                        "label-md": ["Inter"],
-                        "headline-lg": ["Inter"],
-                        "label-sm": ["Inter"],
-                        "headline-lg-mobile": ["Inter"],
-                        "body-lg": ["Inter"],
-                        "body-md": ["Inter"],
-                        "headline-xl": ["Inter"]
+                    borderRadius: {
+                        DEFAULT: "8px",
+                        lg: "8px",
+                        xl: "12px",
+                        "2xl": "16px",
+                        full: "9999px"
                     },
-                    "fontSize": {
-                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
-                        "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }],
-                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }],
-                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "700" }],
-                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
-                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
-                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    maxWidth: { "container": "1200px" },
+                    boxShadow: {
+                        "card": "rgba(17,26,74,0.1) 0px 1px 3px 0px, rgba(17,26,74,0.05) 0px 1px 0px 0px, rgba(255,255,255,0.5) 0px 1px 0px 0px inset",
+                        "float": "rgba(0,0,0,0.02) 0px 40px 32px 0px, rgba(0,0,0,0.03) 0px 22px 18px 0px, rgba(0,0,0,0.03) 0px 12px 10px 0px, rgba(0,0,0,0.04) 0px 7px 5px 0px, rgba(0,0,0,0.07) 0px 3px 2px 0px",
+                        "hairline": "rgba(87,90,100,0.12) 0px 0px 0px 1px",
+                        "btn-hover": "rgba(0,0,0,0.05) 0px 4px 8px 0px, rgba(0,0,0,0.1) 0px 2px 4px 0px"
                     }
                 }
             }
@@ -140,350 +100,625 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
+            background-color: #f6f6f8;
         }
 
-        .hero-gradient {
-            background: linear-gradient(135deg, #00162a 0%, #0d2b45 100%);
+        /* Frosted glass */
+        .glass {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
-        .glass-card {
-            backdrop-filter: blur(8px);
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        /* Halftone dot map motif */
+        .dot-field {
+            background-image: radial-gradient(circle, rgba(17, 26, 74, 0.10) 1.4px, transparent 1.5px);
+            background-size: 16px 16px;
+        }
+
+        /* Soft hero bloom (cool, page-appropriate) */
+        .bloom {
+            background:
+                radial-gradient(40% 60% at 85% 0%, rgba(126, 167, 233, 0.20), transparent 70%),
+                radial-gradient(40% 50% at 0% 10%, rgba(193, 232, 239, 0.35), transparent 70%);
+        }
+
+        /* 3D tilt + depth */
+        .tilt {
+            transform: perspective(1000px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg)) translateZ(0);
+            transform-style: preserve-3d;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s;
+        }
+
+        .tilt.is-tilting {
+            transition: transform 0.08s linear, box-shadow 0.4s;
+        }
+
+        .tilt__layer {
+            transform: translateZ(40px);
+            transform-style: preserve-3d;
+        }
+
+        .tilt__glare {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.4s;
+            background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 0%), rgba(255, 255, 255, 0.55), transparent 45%);
+        }
+
+        .tilt:hover .tilt__glare {
+            opacity: 1;
+        }
+
+        @keyframes floaty {
+
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        .floaty { animation: floaty 7s ease-in-out infinite; }
+
+        .floaty-slow { animation: floaty 9s ease-in-out infinite; }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+            will-change: opacity, transform;
+        }
+
+        .reveal.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+
+        .press {
+            transition: transform 0.15s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s, background-color 0.3s, color 0.3s;
+        }
+
+        .press:active {
+            transform: scale(0.98);
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+
+            .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+
+            .floaty, .floaty-slow { animation: none !important; }
+
+            .tilt { transform: none !important; }
         }
     </style>
 </head>
 
-<body class="bg-surface text-on-surface">
-    <!-- TopNavBar -->
-    <nav class="sticky top-0 z-50 w-full bg-surface/95 dark:bg-primary/95 backdrop-blur-md shadow-sm dark:shadow-none">
-        <div class="flex justify-between items-center h-20 px-margin-desktop max-w-container-max mx-auto">
-            <div class="flex items-center gap-4">
-                <img alt="StraViTech Logo" class="h-14 w-auto"
-                    src="/assets/stravitech_logo.png" />
+<body class="bg-paper text-ink antialiased">
+    <a href="#main"
+        class="sr-only focus:not-sr-only focus:absolute focus:z-[100] focus:top-4 focus:left-4 focus:bg-indigo-brand focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip
+        to content</a>
 
+    <!-- Nav (frosted glass pill) -->
+    <nav class="sticky top-0 z-50 w-full pt-4">
+        <div class="max-w-container mx-auto px-4 md:px-12">
+            <div class="glass shadow-card rounded-2xl flex justify-between items-center h-16 px-4 md:px-6">
+                <a href="index.html" class="flex items-center gap-2" aria-label="StraViTech home">
+                    <img alt="StraViTech" class="h-9 w-auto" src="/assets/stravitech_logo.png" />
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-ink text-body-sm font-medium" href="index.html">Home</a>
+                    <a class="text-carbon/70 hover:text-ink text-body-sm transition-colors" href="services.html">Services</a>
+                    <a class="text-carbon/70 hover:text-ink text-body-sm transition-colors" href="work.html">Work</a>
+                    <a class="text-carbon/70 hover:text-ink text-body-sm transition-colors" href="about.html">About</a>
+                </div>
+                <div class="hidden md:flex items-center gap-3">
+                    <a href="contact.html" class="press text-ink text-body-sm font-medium px-4 py-2.5 rounded-lg border border-mist hover:border-fog">Sign in</a>
+                    <a href="contact.html"
+                        class="press inline-flex items-center gap-1.5 bg-indigo-brand text-white text-body-sm font-medium px-5 py-2.5 rounded-lg shadow-card hover:shadow-btn-hover">
+                        Get started <span class="text-white/80">→</span>
+                    </a>
+                </div>
+                <button id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"
+                    class="md:hidden w-11 h-11 flex items-center justify-center rounded-lg text-ink cursor-pointer">
+                    <span class="material-symbols-outlined" id="menu-icon">menu</span>
+                </button>
             </div>
-            <div class="hidden md:flex items-center gap-10">
-                <a class="text-secondary dark:text-secondary-fixed-dim font-bold border-b-2 border-secondary pb-1 text-label-md font-label-md"
-                    href="#">Home</a>
-                <a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary transition-colors text-label-md font-label-md"
-                    href="#services">Services</a>
-                <a class="text-on-surface-variant dark:text-on-tertiary-container hover:text-secondary transition-colors text-label-md font-label-md"
-                    href="#about">About</a>
-                <button
-                    class="bg-secondary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md hover:opacity-90 transition-all duration-300 active:scale-95">Contact
-                    Us</button>
+            <div id="mobile-menu" class="hidden md:hidden glass shadow-card rounded-2xl mt-2 p-2">
+                <div class="flex flex-col">
+                    <a class="py-3 px-4 rounded-lg text-ink font-medium text-body" href="index.html">Home</a>
+                    <a class="py-3 px-4 rounded-lg text-carbon/70 hover:bg-paper transition-colors text-body" href="services.html">Services</a>
+                    <a class="py-3 px-4 rounded-lg text-carbon/70 hover:bg-paper transition-colors text-body" href="work.html">Work</a>
+                    <a class="py-3 px-4 rounded-lg text-carbon/70 hover:bg-paper transition-colors text-body" href="about.html">About</a>
+                    <a class="mt-1 inline-flex items-center justify-center gap-1.5 bg-indigo-brand text-white px-4 py-3 rounded-lg text-body-sm font-medium" href="contact.html">Get started <span class="text-white/80">→</span></a>
+                </div>
             </div>
-            <button class="md:hidden text-primary">
-                <span class="material-symbols-outlined">menu</span>
-            </button>
         </div>
     </nav>
-    <main>
-        <!-- Hero Section -->
-        <section class="hero-gradient text-on-primary py-stack-lg md:py-32 overflow-hidden relative">
-            <div class="absolute inset-0 opacity-10">
-                <div class="absolute top-0 right-0 w-96 h-96 bg-secondary rounded-full blur-[120px]"></div>
-                <div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-fixed rounded-full blur-[120px]"></div>
-            </div>
-            <div
-                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+
+    <main id="main">
+        <!-- Hero -->
+        <section class="relative overflow-hidden">
+            <div class="absolute inset-0 bloom -z-10" aria-hidden="true"></div>
+            <div class="absolute inset-0 dot-field opacity-60 -z-10" aria-hidden="true"></div>
+            <div class="max-w-container mx-auto px-4 md:px-12 pt-20 pb-24 md:pt-28 md:pb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h1 class="text-headline-lg-mobile md:text-headline-xl font-headline-xl mb-6 leading-tight">
-                        Accelerating Business <br /><span class="text-secondary-container">Innovation</span> with AI
-                        &amp; Tech
+                    <span class="reveal inline-flex items-center gap-2 bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-7">
+                        Trusted at scale
+                    </span>
+                    <h1 class="reveal text-[40px] leading-[1.08] md:text-display font-light tracking-tight mb-6">
+                        Accelerating business <span class="text-fog">innovation with AI &amp; tech.</span>
                     </h1>
-                    <p class="text-body-lg font-body-lg text-primary-fixed-dim mb-10 max-w-lg">
-                        Upgrade legacy ecosystems, automate complex workflows, and build bespoke software solutions that
-                        drive precision and financial stability.
+                    <p class="reveal text-body-lg text-slate-muted max-w-md mb-9">
+                        Upgrade legacy ecosystems, automate complex workflows, and build bespoke software that drives
+                        precision, compliance, and financial stability.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <button
-                            class="bg-secondary text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-secondary-container hover:text-on-secondary-container transition-all duration-300 shadow-lg">Get
-                            Started</button>
-                        <button
-                            class="border-2 border-outline-variant text-on-primary px-10 py-4 rounded-lg font-label-md text-label-md hover:bg-white/10 transition-all duration-300">Learn
-                            More</button>
+                    <div class="reveal flex flex-wrap gap-3">
+                        <a href="contact.html"
+                            class="press inline-flex items-center gap-1.5 bg-indigo-brand text-white text-body-sm font-medium px-5 py-3 rounded-lg shadow-card hover:shadow-btn-hover">
+                            Get started <span class="text-white/80">→</span>
+                        </a>
+                        <a href="work.html"
+                            class="press inline-flex items-center gap-1.5 text-ink text-body-sm font-medium px-4 py-3 rounded-lg border border-mist hover:border-fog hover:text-indigo-brand">
+                            See our work <span class="text-fog">›</span>
+                        </a>
                     </div>
                 </div>
-                <div class="relative">
-                    <div class="rounded-xl overflow-hidden shadow-2xl border border-white/10">
-                        <img class="w-full h-auto object-cover"
-                            data-alt="A futuristic and highly detailed digital representation of a data-driven business environment. The scene features translucent holographic interface overlays floating over a sleek, modern workstation in a high-rise office at twilight. Cool blue and deep navy tones dominate the palette, with vibrant teal accents representing data streams. The lighting is cinematic and moody, emphasizing precision and cutting-edge software development."
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDynj6z4URThrqHHiWL-zIcuT-u_WGLQkafEVBNtU6mlvSC2TqiAj6Dru-hbNQJPiYLhw6TT31qbPBgfr2fQazynCV-FnpnUeDoc-0l6FtneIE99sVybjw2adVKEHeSAmupTNrqpoQhUUByl5Q64gFJXk3_mMo1dEwreEs31aLnzmiA0xcSiSqAAXO9B5yiyiAaoZx3VrNqzL24zafzS8L_Yb0DZjoutO7EA05lOchX_jjJUN5C1gOnCGOlkojKR4dAy2TzaNG0s9zp" />
-                    </div>
-                    <div class="absolute -bottom-6 -left-6 glass-card p-6 rounded-lg hidden lg:block">
-                        <div class="flex items-center gap-3">
-                            <span class="material-symbols-outlined text-secondary-container text-4xl"
-                                data-weight="fill">rocket_launch</span>
-                            <div>
-                                <div class="text-label-sm font-label-sm text-on-tertiary-container">Performance Boost
-                                </div>
-                                <div class="text-headline-md font-headline-md text-white">400% Faster</div>
+
+                <!-- Floating data card mockups (Column's signature illustration device) -->
+                <div class="reveal relative" style="perspective:1200px">
+                    <div class="floaty max-w-sm ml-auto">
+                    <div class="tilt bg-card rounded-2xl shadow-float p-6 relative" data-tilt="8">
+                        <div class="tilt__glare"></div>
+                        <div class="tilt__layer flex items-center justify-between pb-4 border-b border-mist">
+                            <div class="flex items-center gap-2">
+                                <span class="w-7 h-7 rounded-lg bg-paper flex items-center justify-center">
+                                    <span class="material-symbols-outlined text-indigo-brand text-[18px]">account_balance_wallet</span>
+                                </span>
+                                <span class="text-body-sm font-medium text-ink">Operating Account</span>
                             </div>
+                            <span class="font-mono text-[10px] text-slate-muted uppercase">USD</span>
                         </div>
+                        <div class="tilt__layer pt-4">
+                            <div class="font-mono text-[10px] text-slate-muted uppercase mb-1">Available balance</div>
+                            <div class="text-heading font-light text-ink">$2,480,910<span class="text-fog">.00</span></div>
+                        </div>
+                        <div class="mt-4 bg-graphite rounded-lg p-3 font-mono text-[10px] leading-relaxed text-cyan-pale overflow-x-auto">
+                            <span class="text-fog">POST</span> /v1/payments<br />
+                            { "amount": <span class="text-mint">250000</span>, "status": <span class="text-mint">"settled"</span> }
+                        </div>
+                    </div>
+                    </div>
+                    <!-- secondary overlapping accent card -->
+                    <div class="floaty-slow absolute -bottom-8 -left-2 md:-left-6 w-56 hidden sm:block">
+                    <div class="tilt bg-card rounded-2xl shadow-float p-5 relative" data-tilt="10">
+                        <div class="tilt__glare"></div>
+                        <div class="bg-ember rounded-lg p-4 text-white">
+                            <div class="font-mono text-[10px] uppercase opacity-80 mb-2">Monthly throughput</div>
+                            <svg viewBox="0 0 120 32" class="w-full h-8 mb-2" preserveAspectRatio="none" aria-hidden="true">
+                                <polyline points="0,28 20,22 40,24 60,12 80,16 100,6 120,9" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="text-subheading font-light">+400% faster</div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Services Section (Bento Grid Style) -->
-        <section class="py-stack-lg bg-surface-container-lowest" id="services">
-            <div class="max-w-container-max mx-auto px-margin-desktop">
-                <div class="text-center mb-16">
-                    <span class="text-secondary font-label-md text-label-md uppercase tracking-widest">Our
-                        Expertise</span>
-                    <h2 class="text-headline-lg font-headline-lg text-primary mt-2">Comprehensive Solutions</h2>
+
+        <!-- Metrics (editorial figures on canvas) -->
+        <section class="py-12 border-y border-mist" aria-label="Key metrics">
+            <div class="max-w-container mx-auto px-4 md:px-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="reveal">
+                    <div class="text-heading-lg font-light text-ink" data-count="2" data-suffix="+">0</div>
+                    <div class="font-mono text-[11px] uppercase tracking-wider text-slate-muted mt-2">Products delivered</div>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
-                    <!-- Digital Transformation -->
-                    <div
-                        class="md:col-span-7 bg-white border border-outline-variant rounded-xl p-8 hover:shadow-md transition-all group">
-                        <div class="flex flex-col h-full justify-between">
-                            <div>
-                                <div
-                                    class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6 group-hover:bg-secondary transition-colors">
-                                    <span
-                                        class="material-symbols-outlined text-secondary group-hover:text-white">update</span>
-                                </div>
-                                <h3 class="text-headline-md font-headline-md text-primary mb-4">Digital Transformation
-                                </h3>
-                                <p class="text-body-md font-body-md text-on-surface-variant">Modernizing old-age
-                                    websites and tech stacks into high-performance, cloud-native architectures that
-                                    scale with your business growth.</p>
-                            </div>
-                            <div class="mt-8 overflow-hidden rounded-lg">
-                                <img class="w-full h-48 object-cover"
-                                    data-alt="A clean and professional split-screen visual showing an old, outdated cluttered server room on one side transforming into a bright, minimalist cloud data center with sleek fiber optic lines. The color scheme transitions from dusty grays to vibrant navy and teal. High-key lighting in the modern section suggests efficiency and innovation."
-                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKS6RhptW1rV7uyfFS2a8dOucO9fTXcknNO5fZm8agyxlHmu58-U-DW-ko83YvKtc8zX0KKP1jUB9uStwNtGHsLUvctRIfX5qA4m3sPOwA4OmCCEu9PLx1hGbJDkpR-7PR999A5KDJ-DEkE0hum3nrznJgUXQNaWjX8BOO5jQHkzESUDk_7pTyVSd_gff13DW-_3wT3h-EQCfmhkeccYlrMFgzF7OmJ8p7_Jk3TQRLpM2iZcHHhBggqyUYXgnn-DDYoXsePI-knzRG" />
-                            </div>
-                        </div>
+                <div class="reveal">
+                    <div class="text-heading-lg font-light text-ink" data-count="400" data-suffix="%">0</div>
+                    <div class="font-mono text-[11px] uppercase tracking-wider text-slate-muted mt-2">Faster workflows</div>
+                </div>
+                <div class="reveal">
+                    <div class="text-heading-lg font-light text-ink" data-count="100" data-suffix="%">0</div>
+                    <div class="font-mono text-[11px] uppercase tracking-wider text-slate-muted mt-2">Compliance focus</div>
+                </div>
+                <div class="reveal">
+                    <div class="text-heading-lg font-light text-ink" data-count="24" data-suffix="/7">0</div>
+                    <div class="font-mono text-[11px] uppercase tracking-wider text-slate-muted mt-2">Support &amp; uptime</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section class="py-20 md:py-24" id="services">
+            <div class="max-w-container mx-auto px-4 md:px-12">
+                <div class="mb-14 reveal max-w-2xl">
+                    <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Our expertise</span>
+                    <h2 class="text-heading-lg font-light tracking-tight">Comprehensive solutions <span class="text-fog">engineered for precision.</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <!-- Card -->
+                    <div class="reveal tilt group bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-6" data-tilt="5">
+                        <span class="w-10 h-10 rounded-lg bg-paper flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined text-indigo-brand text-[20px]">update</span>
+                        </span>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Digital Transformation</h3>
+                        <p class="text-body text-slate-muted">Modernizing legacy websites and tech stacks into high-performance, cloud-native architectures that scale.</p>
                     </div>
-                    <!-- Financial & Compliance -->
-                    <div
-                        class="md:col-span-5 bg-primary-container text-on-primary rounded-xl p-8 hover:shadow-xl transition-all relative overflow-hidden group">
-                        <div class="relative z-10">
-                            <div class="w-12 h-12 bg-white/10 rounded-lg flex items-center justify-center mb-6">
-                                <span class="material-symbols-outlined text-secondary-container">account_balance</span>
-                            </div>
-                            <h3 class="text-headline-md font-headline-md mb-4">Financial &amp; Compliance</h3>
-                            <p class="text-body-md font-body-md text-on-primary-container">Navigating the complexities
-                                of GST, company registration, and monthly business filings with automated precision and
-                                security.</p>
-                        </div>
-                        <div class="absolute -right-8 -bottom-8 opacity-20 group-hover:scale-110 transition-transform">
-                            <span class="material-symbols-outlined text-[160px]">shield_person</span>
-                        </div>
+                    <div class="reveal tilt group bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-6" data-tilt="5">
+                        <span class="w-10 h-10 rounded-lg bg-paper flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined text-indigo-brand text-[20px]">account_balance</span>
+                        </span>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Financial &amp; Compliance</h3>
+                        <p class="text-body text-slate-muted">GST, company registration, and monthly business filings handled with automated precision and security.</p>
                     </div>
-                    <!-- Custom Software -->
-                    <div
-                        class="md:col-span-5 bg-white border border-outline-variant rounded-xl p-8 hover:shadow-md transition-all group">
-                        <div class="w-12 h-12 bg-surface-container rounded-lg flex items-center justify-center mb-6">
-                            <span class="material-symbols-outlined text-secondary">terminal</span>
-                        </div>
-                        <h3 class="text-headline-md font-headline-md text-primary mb-4">Custom Software</h3>
-                        <p class="text-body-md font-body-md text-on-surface-variant mb-6">Bespoke software development
-                            tailored to your unique operational needs, ensuring maximum ROI and operational efficiency.
-                        </p>
-                        <ul class="space-y-3">
-                            <li class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
-                                <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                                Enterprise ERPs
-                            </li>
-                            <li class="flex items-center gap-2 text-label-sm font-label-sm text-on-surface-variant">
-                                <span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
-                                Mobile Applications
-                            </li>
+                    <div class="reveal tilt group bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-6" data-tilt="5">
+                        <span class="w-10 h-10 rounded-lg bg-paper flex items-center justify-center mb-5">
+                            <span class="material-symbols-outlined text-indigo-brand text-[20px]">terminal</span>
+                        </span>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Custom Software</h3>
+                        <p class="text-body text-slate-muted mb-4">Bespoke ERPs, billing systems, field-service and mobile apps tailored to your operations.</p>
+                        <ul class="space-y-2">
+                            <li class="flex items-center gap-2 text-body-sm text-slate-muted"><span class="material-symbols-outlined text-forest-teal text-[16px]">check_circle</span> Enterprise ERPs &amp; Billing</li>
+                            <li class="flex items-center gap-2 text-body-sm text-slate-muted"><span class="material-symbols-outlined text-forest-teal text-[16px]">check_circle</span> Field Service &amp; Mobile</li>
                         </ul>
                     </div>
-                    <!-- AI Content -->
-                    <div
-                        class="md:col-span-7 bg-surface-container-high rounded-xl p-8 hover:shadow-md transition-all flex flex-col md:flex-row gap-8 items-center">
+                    <div class="reveal group bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-6 md:col-span-3 flex flex-col md:flex-row md:items-center gap-6">
+                        <span class="w-10 h-10 rounded-lg bg-paper flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined text-indigo-brand text-[20px]">psychology</span>
+                        </span>
                         <div class="flex-1">
-                            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center mb-6 shadow-sm">
-                                <span class="material-symbols-outlined text-secondary">psychology</span>
+                            <h3 class="text-heading-sm font-normal text-ink mb-2">Social Media &amp; AI Content</h3>
+                            <p class="text-body text-slate-muted max-w-2xl">Harnessing generative AI for content creation, automated management, and data-driven engagement strategies.</p>
+                        </div>
+                        <a href="services.html" class="text-body-sm font-medium text-indigo-brand inline-flex items-center gap-1.5 shrink-0">Explore services <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Work -->
+        <section class="py-20 md:py-24 relative" id="work">
+            <div class="max-w-container mx-auto px-4 md:px-12">
+                <div class="mb-14 reveal max-w-2xl">
+                    <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Proven results</span>
+                    <h2 class="text-heading-lg font-light tracking-tight">Real software, <span class="text-fog">delivered for real businesses.</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                    <!-- Krisha (teal/neutral) -->
+                    <article class="reveal tilt bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-8 flex flex-col" data-tilt="4">
+                        <div class="flex items-center justify-between mb-6">
+                            <img src="/assets/krisha-logo.jpg" alt="Krisha Mechatronics logo" loading="lazy" class="h-10 w-auto object-contain rounded-lg" />
+                            <span class="bg-cyan-pale text-forest-teal rounded-full px-3 py-1 font-mono text-[10px] uppercase tracking-wider">Field Service</span>
+                        </div>
+                        <h3 class="text-heading-sm font-normal text-ink mb-3">Krisha Mechatronics — FSM Platform</h3>
+                        <p class="text-body text-slate-muted mb-6 flex-1">A field service management platform with dedicated customer and staff apps — streamlining job scheduling, on-site service tracking, and real-time coordination on a secure cloud backend.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Mobile Apps</span>
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Firebase</span>
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Cloud</span>
+                        </div>
+                    </article>
+                    <!-- Marriotz (ember accent card — rationed) -->
+                    <article class="reveal tilt bg-card rounded-2xl shadow-card hover:shadow-float transition-shadow duration-500 p-8 flex flex-col" data-tilt="4">
+                        <div class="bg-ember rounded-xl p-5 text-white mb-6">
+                            <div class="flex items-center justify-between mb-3">
+                                <span class="font-mono text-[10px] uppercase opacity-80">Billing throughput</span>
+                                <span class="material-symbols-outlined text-[20px]">receipt_long</span>
                             </div>
-                            <h3 class="text-headline-md font-headline-md text-primary mb-4">Social Media &amp; AI
-                                Content</h3>
-                            <p class="text-body-md font-body-md text-on-surface-variant">Harnessing generative AI for
-                                content creation, automated management, and data-driven engagement strategies.</p>
+                            <svg viewBox="0 0 240 40" class="w-full h-9 mb-2" preserveAspectRatio="none" aria-hidden="true">
+                                <polyline points="0,34 30,30 60,32 90,20 120,24 150,12 180,16 210,7 240,10" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div class="text-subheading font-light">Invoices, automated</div>
                         </div>
-                        <div class="flex-1 w-full h-48 rounded-lg bg-white overflow-hidden shadow-sm">
-                            <img class="w-full h-full object-cover"
-                                data-alt="A modern office workspace with a minimalist design, featuring a laptop screen displaying vibrant AI-generated marketing graphics and analytics dashboards. The room is filled with soft natural light, and the overall aesthetic is clean and corporate. The color palette uses subtle tones of light gray and white with sharp pops of corporate teal."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtm3IGY9WO50_aF78u_QCZFTOpSk91Ibq32xh9Qcp-_1w7RU7TdoK23N9R7r6jQe766ve9JBU_TjGVwQbr9AOAHmzh6G8IbiGu-4B-4_7I2eU8NtSZv-Kmsm6iEqxY2mQWbcdg_81ek9L_kwFk_XJMUb2OFXmS6_hgYT6KSNYlSoihL0_lpU-PG6e6YUHeq4LpwFTPRDmqH5_ve_8E78nZBncyp18flgh4Ee7EQdyicFk00lkaEpK7ykk9x12EoKU8jZqqvmOKCfAD" />
+                        <h3 class="text-heading-sm font-normal text-ink mb-3">Marriotz — Billing System</h3>
+                        <p class="text-body text-slate-muted mb-6 flex-1">Custom billing software for Marriotz, a turnkey electrical contracting &amp; MEEP engineering firm — automating invoicing, project billing, and financial tracking across high-value infrastructure projects.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Custom Software</span>
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Invoicing</span>
+                            <span class="text-caption text-slate-muted border border-mist px-3 py-1 rounded-full">Finance</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="mt-10 reveal">
+                    <a href="work.html" class="text-body-sm font-medium text-indigo-brand inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">View all work <span>→</span></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="py-20 md:py-24">
+            <div class="max-w-container mx-auto px-4 md:px-12">
+                <div class="mb-14 reveal max-w-2xl">
+                    <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Our process</span>
+                    <h2 class="text-heading-lg font-light tracking-tight">How we work.</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="reveal bg-card rounded-2xl shadow-card p-8">
+                        <div class="font-mono text-body-sm text-fog mb-4">01</div>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Consult</h3>
+                        <p class="text-body text-slate-muted">We audit your current tech landscape and define a roadmap for transformation.</p>
+                    </div>
+                    <div class="reveal bg-card rounded-2xl shadow-card p-8">
+                        <div class="font-mono text-body-sm text-fog mb-4">02</div>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Develop</h3>
+                        <p class="text-body text-slate-muted">Our expert team engineers high-precision solutions with an agile mindset.</p>
+                    </div>
+                    <div class="reveal bg-card rounded-2xl shadow-card p-8">
+                        <div class="font-mono text-body-sm text-fog mb-4">03</div>
+                        <h3 class="text-heading-sm font-normal text-ink mb-2">Scale</h3>
+                        <p class="text-body text-slate-muted">Deploy and optimize your new infrastructure for global-ready operations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials (quotes on canvas, no card wrapper) -->
+        <section class="py-20 md:py-24">
+            <div class="max-w-container mx-auto px-4 md:px-12">
+                <div class="mb-14 reveal max-w-2xl">
+                    <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Client voices</span>
+                    <h2 class="text-heading-lg font-light tracking-tight">What our clients say.</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <figure class="reveal">
+                        <span class="text-heading-lg font-light text-fog leading-none">“</span>
+                        <blockquote class="text-subheading font-light text-ink -mt-4 mb-5">StraViTech delivered our field service platform on time and exactly to spec. The customer and staff apps transformed how our team coordinates on-site work.</blockquote>
+                        <figcaption class="text-body-sm text-slate-muted">Krisha Mechatronics — Field Service Management</figcaption>
+                    </figure>
+                    <figure class="reveal">
+                        <span class="text-heading-lg font-light text-fog leading-none">“</span>
+                        <blockquote class="text-subheading font-light text-ink -mt-4 mb-5">Their billing software brought precision and speed to our invoicing across complex electrical projects. A genuine upgrade to how we run finance.</blockquote>
+                        <figcaption class="text-body-sm text-slate-muted">Marriotz MEEP — Electrical Contracting &amp; Engineering</figcaption>
+                    </figure>
+                </div>
+                <p class="font-mono text-[11px] uppercase tracking-wider text-fog mt-10 reveal">Placeholder quotes — replace with approved client testimonials.</p>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="py-20 md:py-24" id="about">
+            <div class="max-w-container mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+                <div class="reveal">
+                    <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Our mission</span>
+                    <h2 class="text-heading-lg font-light tracking-tight mb-6">Bridging tradition <span class="text-fog">with technology.</span></h2>
+                    <p class="text-body-lg text-slate-muted mb-5">At StraViTech, we believe every business deserves access to enterprise-grade technology. Our mission is to bridge the gap between traditional operations and the modern tech ecosystem.</p>
+                    <p class="text-body text-slate-muted mb-7">We don't just build software; we engineer growth engines — combining financial domain expertise with cutting-edge AI and software development.</p>
+                    <a href="about.html" class="text-body-sm font-medium text-indigo-brand inline-flex items-center gap-1.5 hover:gap-2.5 transition-all">More about us <span>→</span></a>
+                </div>
+                <div class="reveal relative">
+                    <div class="absolute inset-0 dot-field opacity-50" aria-hidden="true"></div>
+                    <div class="relative bg-card rounded-2xl shadow-float p-6 grid grid-cols-2 gap-4">
+                        <div class="bg-paper rounded-xl p-5">
+                            <span class="material-symbols-outlined text-indigo-brand">verified_user</span>
+                            <div class="text-body-sm font-medium text-ink mt-3">Compliance-first</div>
+                            <div class="text-caption text-slate-muted mt-1">Security &amp; filings built in</div>
+                        </div>
+                        <div class="bg-paper rounded-xl p-5">
+                            <span class="material-symbols-outlined text-indigo-brand">bolt</span>
+                            <div class="text-body-sm font-medium text-ink mt-3">AI-accelerated</div>
+                            <div class="text-caption text-slate-muted mt-1">Faster delivery, less toil</div>
+                        </div>
+                        <div class="bg-paper rounded-xl p-5">
+                            <span class="material-symbols-outlined text-indigo-brand">groups</span>
+                            <div class="text-body-sm font-medium text-ink mt-3">Domain experts</div>
+                            <div class="text-caption text-slate-muted mt-1">Finance + engineering</div>
+                        </div>
+                        <div class="bg-paper rounded-xl p-5">
+                            <span class="material-symbols-outlined text-indigo-brand">trending_up</span>
+                            <div class="text-body-sm font-medium text-ink mt-3">Built to scale</div>
+                            <div class="text-caption text-slate-muted mt-1">Cloud-native by default</div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Process Section -->
-        <section class="py-stack-lg bg-primary text-on-primary">
-            <div class="max-w-container-max mx-auto px-margin-desktop text-center">
-                <h2 class="text-headline-lg font-headline-lg mb-16">How We Work</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
-                    <!-- Step 1 -->
-                    <div class="relative">
-                        <div
-                            class="text-headline-xl font-headline-xl text-secondary-container/20 absolute -top-8 left-1/2 -translate-x-1/2">
-                            01</div>
-                        <div class="relative z-10">
-                            <h4 class="text-headline-md font-headline-md mb-4">Consult</h4>
-                            <p class="text-on-primary-container">We audit your current tech landscape and define a
-                                roadmap for transformation.</p>
-                        </div>
+
+        <!-- Contact -->
+        <section class="py-20 md:py-24 relative overflow-hidden" id="contact">
+            <div class="absolute inset-0 bloom -z-10" aria-hidden="true"></div>
+            <div class="max-w-2xl mx-auto px-4 md:px-12">
+                <div class="glass shadow-float rounded-2xl p-8 md:p-12 reveal">
+                    <div class="mb-8">
+                        <span class="inline-flex bg-cyan-pale text-forest-teal rounded-full px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider mb-5">Get in touch</span>
+                        <h2 class="text-heading font-light tracking-tight">Ready to transform your business?</h2>
+                        <p class="text-body text-slate-muted mt-3">Let's start the conversation.</p>
                     </div>
-                    <!-- Step 2 -->
-                    <div class="relative">
-                        <div
-                            class="text-headline-xl font-headline-xl text-secondary-container/20 absolute -top-8 left-1/2 -translate-x-1/2">
-                            02</div>
-                        <div class="relative z-10">
-                            <h4 class="text-headline-md font-headline-md mb-4">Develop</h4>
-                            <p class="text-on-primary-container">Our expert team engineers high-precision solutions with
-                                an agile mindset.</p>
+                    <form class="space-y-5" id="contact-form" novalidate>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="name" class="block text-body-sm font-medium text-ink mb-2">Full name <span class="text-ember">*</span></label>
+                                <input id="name" name="name" required autocomplete="name" type="text" placeholder="John Doe"
+                                    class="w-full bg-card border-mist rounded-lg py-3 px-4 text-body text-ink placeholder:text-fog focus:border-indigo-brand focus:ring-2 focus:ring-indigo-brand/20 transition-colors" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-body-sm font-medium text-ink mb-2">Email address <span class="text-ember">*</span></label>
+                                <input id="email" name="email" required autocomplete="email" type="email" placeholder="john@company.com"
+                                    class="w-full bg-card border-mist rounded-lg py-3 px-4 text-body text-ink placeholder:text-fog focus:border-indigo-brand focus:ring-2 focus:ring-indigo-brand/20 transition-colors" />
+                            </div>
                         </div>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="relative">
-                        <div
-                            class="text-headline-xl font-headline-xl text-secondary-container/20 absolute -top-8 left-1/2 -translate-x-1/2">
-                            03</div>
-                        <div class="relative z-10">
-                            <h4 class="text-headline-md font-headline-md mb-4">Scale</h4>
-                            <p class="text-on-primary-container">Deploy and optimize your new infrastructure for
-                                global-ready operations.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- About Us Section -->
-        <section class="py-stack-lg bg-surface" id="about">
-            <div
-                class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <img class="rounded-xl shadow-lg border border-outline-variant"
-                        data-alt="A collaborative team of diverse professionals in a high-tech corporate conference room with glass walls and large windows overlooking a modern skyline. They are engaged in a strategic discussion around a large digital interactive table showing architectural software diagrams. The mood is focused and innovative, with a bright and airy atmosphere using blue and white as primary colors."
-                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-A4Z1lr0TuolRZFw5jGgnd4gwnECetCu8lm30q_xdQowpNV33wJk79emxO7LkoAhkkpQf3jFU8lRjLkekt9QyQJpuUua7S9j4UskPJJjim5YKR_2xc-p-VnovHFZ4zfsEU4ZEEpstVFPWFE4eonZupj7IZTAmHd9rQC1AJbkoTcAyEsPxxE4FglG5ZKIBz6_XdCd7CsCoDt3MqDp4IlAotm0IBWo_AShBsZ_88cTwByrbBjCzbN7dthMqSl0IOk1BjLkK5vcZY2r-" />
-                </div>
-                <div class="order-1 md:order-2">
-                    <span class="text-secondary font-label-md text-label-md uppercase tracking-widest">Our
-                        Mission</span>
-                    <h2 class="text-headline-lg font-headline-lg text-primary mt-2 mb-6">Bridging Tradition with
-                        Technology</h2>
-                    <p class="text-body-lg font-body-lg text-on-surface-variant mb-6">
-                        At StraViTech, we believe that every business deserves access to enterprise-grade technology.
-                        Our mission is to bridge the gap between traditional business operations and the rapidly
-                        evolving modern tech ecosystem.
-                    </p>
-                    <p class="text-body-md font-body-md text-on-surface-variant">
-                        We don't just build software; we engineer growth engines. By combining years of financial domain
-                        expertise with cutting-edge AI and software development, we ensure your business is not just
-                        relevant today, but pioneering tomorrow.
-                    </p>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Form Section -->
-        <section class="py-stack-lg bg-surface-container-low">
-            <div
-                class="max-w-3xl mx-auto px-margin-desktop bg-white p-8 md:p-12 rounded-xl shadow-sm border border-outline-variant">
-                <div class="text-center mb-10">
-                    <h2 class="text-headline-lg font-headline-lg text-primary">Get in Touch</h2>
-                    <p class="text-body-md font-body-md text-on-surface-variant mt-2">Ready to transform your business?
-                        Let's start the conversation.</p>
-                </div>
-                <form class="space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-label-md font-label-md text-on-surface mb-2">Full Name</label>
-                            <input
-                                class="w-full bg-surface border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-colors"
-                                placeholder="John Doe" type="text" />
+                            <label for="subject" class="block text-body-sm font-medium text-ink mb-2">Subject</label>
+                            <select id="subject" name="subject"
+                                class="w-full bg-card border-mist rounded-lg py-3 px-4 text-body text-ink focus:border-indigo-brand focus:ring-2 focus:ring-indigo-brand/20 transition-colors">
+                                <option>Digital Transformation</option>
+                                <option>Custom Software</option>
+                                <option>Compliance &amp; Finance</option>
+                                <option>AI Content Services</option>
+                            </select>
                         </div>
                         <div>
-                            <label class="block text-label-md font-label-md text-on-surface mb-2">Email Address</label>
-                            <input
-                                class="w-full bg-surface border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-colors"
-                                placeholder="john@company.com" type="email" />
+                            <label for="message" class="block text-body-sm font-medium text-ink mb-2">Message <span class="text-ember">*</span></label>
+                            <textarea id="message" name="message" required rows="4" placeholder="Tell us about your project..."
+                                class="w-full bg-card border-mist rounded-lg py-3 px-4 text-body text-ink placeholder:text-fog focus:border-indigo-brand focus:ring-2 focus:ring-indigo-brand/20 transition-colors"></textarea>
                         </div>
-                    </div>
-                    <div>
-                        <label class="block text-label-md font-label-md text-on-surface mb-2">Subject</label>
-                        <select
-                            class="w-full bg-surface border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-colors">
-                            <option>Digital Transformation</option>
-                            <option>Custom Software</option>
-                            <option>Compliance &amp; Finance</option>
-                            <option>AI Content Services</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-label-md font-label-md text-on-surface mb-2">Message</label>
-                        <textarea
-                            class="w-full bg-surface border-outline-variant focus:border-secondary focus:ring-0 rounded-lg py-3 px-4 transition-colors"
-                            placeholder="Tell us about your project..." rows="4"></textarea>
-                    </div>
-                    <button
-                        class="w-full bg-primary text-on-primary py-4 rounded-lg font-headline-md text-headline-md hover:bg-on-surface transition-all active:scale-95 shadow-md"
-                        type="submit">Send Message</button>
-                </form>
+                        <button type="submit"
+                            class="press w-full inline-flex items-center justify-center gap-1.5 bg-indigo-brand text-white py-3.5 rounded-lg text-body-sm font-medium shadow-card hover:shadow-btn-hover">
+                            Send message <span class="text-white/80">→</span>
+                        </button>
+                        <p id="form-status" role="status" aria-live="polite" class="text-center text-body-sm hidden"></p>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
+
     <!-- Footer -->
-    <footer class="bg-primary dark:bg-on-surface w-full pt-stack-lg pb-stack-md border-t border-outline-variant/20">
-        <div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter">
+    <footer class="border-t border-mist py-16 relative overflow-hidden">
+        <div class="absolute bottom-0 inset-x-0 h-32 dot-field opacity-40 -z-10" aria-hidden="true"></div>
+        <div class="max-w-container mx-auto px-4 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12">
             <div>
-                <div class="flex items-center gap-4 mb-6">
-                    <img alt="StraViTech Logo" class="h-14 w-auto bg-white rounded-lg"
-                        src="/assets/Logo_Footer.png" />
-                </div>
-                <p class="text-on-tertiary-container text-body-md font-body-md max-w-sm mb-10">
-                    Precision in Business Innovation. Delivering digital excellence across software, finance, and AI.
-                </p>
-                <div class="flex gap-4">
-                    <a class="text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#"><span
-                            class="material-symbols-outlined">share</span></a>
-                    <a class="text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#"><span
-                            class="material-symbols-outlined">public</span></a>
-                    <a class="text-on-tertiary-container hover:text-secondary-fixed transition-colors" href="#"><span
-                            class="material-symbols-outlined">mail</span></a>
+                <img alt="StraViTech" class="h-9 w-auto mb-5" src="/assets/stravitech_logo.png" />
+                <p class="text-body text-slate-muted max-w-sm mb-7">Precision in business innovation. Delivering digital excellence across software, finance, and AI.</p>
+                <div class="flex gap-2">
+                    <a class="press w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand" href="#" aria-label="Share"><span class="material-symbols-outlined text-xl">share</span></a>
+                    <a class="press w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand" href="#" aria-label="Website"><span class="material-symbols-outlined text-xl">public</span></a>
+                    <a class="press w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand" href="contact.html" aria-label="Email"><span class="material-symbols-outlined text-xl">mail</span></a>
                 </div>
             </div>
             <div class="grid grid-cols-2 gap-8">
                 <div>
-                    <h4 class="text-on-primary text-label-md font-label-md mb-6 uppercase tracking-widest">Solutions
-                    </h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Digital Transformation</a></li>
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Custom Software</a></li>
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Financial Services</a></li>
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Social Media</a></li>
+                    <h4 class="font-mono text-[11px] uppercase tracking-wider text-ink mb-5">Solutions</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="services.html">Digital Transformation</a></li>
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="services.html">Custom Software</a></li>
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="services.html">Financial Services</a></li>
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="services.html">Social Media</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-on-primary text-label-md font-label-md mb-6 uppercase tracking-widest">Legal</h4>
-                    <ul class="space-y-4">
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Privacy Policy</a></li>
-                        <li><a class="text-on-tertiary-container hover:text-on-primary transition-colors text-label-sm font-label-sm"
-                                href="#">Terms of Service</a></li>
+                    <h4 class="font-mono text-[11px] uppercase tracking-wider text-ink mb-5">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="work.html">Our Work</a></li>
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="about.html">About</a></li>
+                        <li><a class="text-body-sm text-slate-muted hover:text-ink transition-colors" href="contact.html">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="max-w-container-max mx-auto px-margin-desktop mt-16 pt-8 border-t border-white/5">
-            <p class="text-on-tertiary-container text-label-sm font-label-sm text-center">
-                © 2026 StraViTech Solutions. All rights reserved. Precision in Business Innovation.
-            </p>
+        <div class="max-w-container mx-auto px-4 md:px-12 mt-14 pt-8 border-t border-mist">
+            <p class="font-mono text-[11px] uppercase tracking-wider text-fog text-center">© 2026 StraViTech Solutions. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            var menuToggle = document.getElementById('menu-toggle');
+            var mobileMenu = document.getElementById('mobile-menu');
+            var menuIcon = document.getElementById('menu-icon');
+            if (menuToggle && mobileMenu) {
+                menuToggle.addEventListener('click', function () {
+                    var open = mobileMenu.classList.toggle('hidden') === false;
+                    menuToggle.setAttribute('aria-expanded', String(open));
+                    menuToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+                    if (menuIcon) menuIcon.textContent = open ? 'close' : 'menu';
+                });
+                mobileMenu.querySelectorAll('a').forEach(function (a) {
+                    a.addEventListener('click', function () {
+                        mobileMenu.classList.add('hidden');
+                        menuToggle.setAttribute('aria-expanded', 'false');
+                        if (menuIcon) menuIcon.textContent = 'menu';
+                    });
+                });
+            }
+
+            var revealEls = document.querySelectorAll('.reveal');
+            if (reduceMotion || !('IntersectionObserver' in window)) {
+                revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+            } else {
+                var io = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var sibs = Array.prototype.slice.call(entry.target.parentElement.querySelectorAll(':scope > .reveal'));
+                            var idx = sibs.indexOf(entry.target);
+                            entry.target.style.transitionDelay = (idx > 0 ? Math.min(idx, 5) * 60 : 0) + 'ms';
+                            entry.target.classList.add('is-visible');
+                            io.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.12 });
+                revealEls.forEach(function (el) { io.observe(el); });
+            }
+
+            var counters = document.querySelectorAll('[data-count]');
+            function animateCount(el) {
+                var target = parseFloat(el.getAttribute('data-count'));
+                var suffix = el.getAttribute('data-suffix') || '';
+                if (reduceMotion) { el.textContent = target + suffix; return; }
+                var start = null, dur = 1400;
+                function step(ts) {
+                    if (!start) start = ts;
+                    var p = Math.min((ts - start) / dur, 1);
+                    var eased = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.round(target * eased) + suffix;
+                    if (p < 1) requestAnimationFrame(step);
+                }
+                requestAnimationFrame(step);
+            }
+            if ('IntersectionObserver' in window) {
+                var cio = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) { animateCount(entry.target); cio.unobserve(entry.target); }
+                    });
+                }, { threshold: 0.5 });
+                counters.forEach(function (el) { cio.observe(el); });
+            } else {
+                counters.forEach(function (el) { el.textContent = el.getAttribute('data-count') + (el.getAttribute('data-suffix') || ''); });
+            }
+
+            // 3D tilt (pointer-driven, desktop only)
+            var canHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+            if (canHover && !reduceMotion) {
+                document.querySelectorAll('.tilt').forEach(function (el) {
+                    var max = parseFloat(el.getAttribute('data-tilt')) || 6;
+                    var frame = null;
+                    el.addEventListener('pointermove', function (e) {
+                        var r = el.getBoundingClientRect();
+                        var px = (e.clientX - r.left) / r.width;
+                        var py = (e.clientY - r.top) / r.height;
+                        if (frame) cancelAnimationFrame(frame);
+                        frame = requestAnimationFrame(function () {
+                            el.classList.add('is-tilting');
+                            el.style.setProperty('--ry', (px - 0.5) * 2 * max + 'deg');
+                            el.style.setProperty('--rx', (0.5 - py) * 2 * max + 'deg');
+                            el.style.setProperty('--mx', px * 100 + '%');
+                            el.style.setProperty('--my', py * 100 + '%');
+                        });
+                    });
+                    el.addEventListener('pointerleave', function () {
+                        if (frame) cancelAnimationFrame(frame);
+                        el.classList.remove('is-tilting');
+                        el.style.setProperty('--rx', '0deg');
+                        el.style.setProperty('--ry', '0deg');
+                    });
+                });
+            }
+
+            var form = document.getElementById('contact-form');
+            var status = document.getElementById('form-status');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var name = form.name.value.trim();
+                    var email = form.email.value.trim();
+                    var message = form.message.value.trim();
+                    var validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+                    status.classList.remove('hidden');
+                    if (!name || !validEmail || !message) {
+                        status.textContent = 'Please fill in your name, a valid email, and a message.';
+                        status.className = 'text-center text-body-sm text-ember';
+                        return;
+                    }
+                    status.textContent = 'Thanks, ' + name + '! Your message is ready — connect a form backend to send it.';
+                    status.className = 'text-center text-body-sm text-forest-teal';
+                    form.reset();
+                });
+            }
+        })();
+    </script>
 </body>
 
 </html>
