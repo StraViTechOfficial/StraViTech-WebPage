@@ -891,6 +891,7 @@ export function Footer() {
         { label: 'Our Work', to: '/work' },
         { label: 'About', to: '/about' },
         { label: 'Contact', to: '/contact' },
+        { label: 'Privacy Policy', to: '/privacy' },
       ],
     },
   ]

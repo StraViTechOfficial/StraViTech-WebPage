@@ -10,6 +10,7 @@ import ServicesPage from './pages/Services'
 import WorkPage from './pages/Work'
 import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
+import PrivacyPage from './pages/Privacy'
 import NotFound from './pages/NotFound'
 
 const META = {
@@ -32,6 +33,10 @@ const META = {
   '/contact': {
     title: 'Contact | StraViTech',
     desc: "Book a call, message us on WhatsApp, or send an enquiry — we'll reply within one business day.",
+  },
+  '/privacy': {
+    title: 'Privacy Policy | StraViTech',
+    desc: 'How StraViTech collects, uses and protects the information you share with us.',
   },
 }
 
@@ -76,6 +81,7 @@ export default function App() {
           <Route path="/work" element={<WorkPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
