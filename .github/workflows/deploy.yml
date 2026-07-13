@@ -30,8 +30,17 @@ jobs:
       - name: Build
         run: npm run build
         working-directory: app
-      - name: SPA fallback (copy index.html to 404.html)
-        run: cp app/dist/index.html app/dist/404.html
+      - name: SPA fallback + static route pages (real 200 on deep-links)
+        run: |
+          cd app/dist
+          # 404.html boots the SPA for any unknown path (client-side routing).
+          cp index.html 404.html
+          # Emit a real file per known route so hard-loads / crawlers (e.g. Meta
+          # fetching the privacy-policy URL) get HTTP 200 instead of the 404 fallback.
+          for r in services work about contact privacy; do
+            cp index.html "$r.html"        # served at /$r  (clean URL)
+            mkdir -p "$r" && cp index.html "$r/index.html"  # served at /$r/
+          done
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
