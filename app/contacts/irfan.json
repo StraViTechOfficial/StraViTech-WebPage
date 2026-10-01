@@ -1,0 +1,16 @@
+{
+  "firstName": "Irfan",
+  "lastName": "Chaudhari",
+  "organization": "StraViTech",
+  "title": "Chief Marketing Officer",
+  "phones": [{ "type": "cell", "number": "+91 73506 49262" }],
+  "emails": [{ "type": "work", "address": "irfan@stravitech.com" }],
+  "website": "https://www.stravitech.com",
+  "address": {
+    "street": "S.No 125 Rana Tara Society Sadhgurunagar",
+    "city": "Pune",
+    "region": "Maharashtra",
+    "postalCode": "411039",
+    "country": "India"
+  }
+}

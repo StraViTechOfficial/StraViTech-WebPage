@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "contacts": "node scripts/build-contacts.mjs",
+    "predev": "npm run contacts",
     "dev": "vite",
+    "prebuild": "npm run contacts",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

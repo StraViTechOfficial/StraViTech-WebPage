@@ -1,0 +1,16 @@
+{
+  "firstName": "Muhammad",
+  "lastName": "Afzal",
+  "organization": "StraViTech",
+  "title": "Chief Operating Officer",
+  "phones": [{ "type": "cell", "number": "+91 91581 17741" }],
+  "emails": [{ "type": "work", "address": "afzal@stravitech.com" }],
+  "website": "https://www.stravitech.com",
+  "address": {
+    "street": "S.No 125 Rana Tara Society Sadhgurunagar",
+    "city": "Pune",
+    "region": "Maharashtra",
+    "postalCode": "411039",
+    "country": "India"
+  }
+}

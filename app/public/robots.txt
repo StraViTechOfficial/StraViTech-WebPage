@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /c/
 
-Sitemap: https://stravitech.in/sitemap.xml
+Sitemap: https://stravitech.com/sitemap.xml
