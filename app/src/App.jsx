@@ -11,6 +11,7 @@ import WorkPage from './pages/Work'
 import AboutPage from './pages/About'
 import ContactPage from './pages/Contact'
 import PrivacyPage from './pages/Privacy'
+import { TermsPage, RefundPage, ShippingPage } from './pages/Legal'
 import NotFound from './pages/NotFound'
 
 const META = {
@@ -37,6 +38,18 @@ const META = {
   '/privacy': {
     title: 'Privacy Policy | StraViTech',
     desc: 'How StraViTech collects, uses and protects the information you share with us.',
+  },
+  '/terms': {
+    title: 'Terms & Conditions | StraViTech',
+    desc: 'The terms that apply when you use this website or engage StraViTech for a project.',
+  },
+  '/refund': {
+    title: 'Cancellation & Refund Policy | StraViTech',
+    desc: 'How cancellations and refunds work for projects and services from StraViTech.',
+  },
+  '/shipping': {
+    title: 'Shipping & Delivery Policy | StraViTech',
+    desc: 'StraViTech provides digital services, so nothing is shipped physically. How we deliver our work.',
   },
 }
 
@@ -82,6 +95,9 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/privacy" element={<PrivacyPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/refund" element={<RefundPage />} />
+          <Route path="/shipping" element={<ShippingPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

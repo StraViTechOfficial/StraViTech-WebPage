@@ -6,4 +6,7 @@
   <url><loc>https://stravitech.com/about</loc><priority>0.6</priority></url>
   <url><loc>https://stravitech.com/contact</loc><priority>0.7</priority></url>
   <url><loc>https://stravitech.com/privacy</loc><priority>0.3</priority></url>
+  <url><loc>https://stravitech.com/terms</loc><priority>0.3</priority></url>
+  <url><loc>https://stravitech.com/refund</loc><priority>0.3</priority></url>
+  <url><loc>https://stravitech.com/shipping</loc><priority>0.3</priority></url>
 </urlset>

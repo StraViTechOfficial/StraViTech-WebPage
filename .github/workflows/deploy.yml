@@ -37,7 +37,7 @@ jobs:
           cp index.html 404.html
           # Emit a real file per known route so hard-loads / crawlers (e.g. Meta
           # fetching the privacy-policy URL) get HTTP 200 instead of the 404 fallback.
-          for r in services work about contact privacy; do
+          for r in services work about contact privacy terms refund shipping; do
             cp index.html "$r.html"        # served at /$r  (clean URL)
             mkdir -p "$r" && cp index.html "$r/index.html"  # served at /$r/
           done

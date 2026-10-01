@@ -18,7 +18,9 @@ export const stagger = {
 }
 
 // A section/group that reveals its children with a stagger on scroll-in.
-export function Reveal({ as = 'div', className, children, amount = 0.2, ...rest }) {
+// Triggers when the top edge clears the bottom 10% of the viewport — not a
+// fraction of the element's height, which never fits on screen for tall pages.
+export function Reveal({ as = 'div', className, children, amount = 0, ...rest }) {
   const Comp = motion[as] || motion.div
   return (
     <Comp
@@ -26,7 +28,7 @@ export function Reveal({ as = 'div', className, children, amount = 0.2, ...rest 
       variants={stagger}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true, amount }}
+      viewport={{ once: true, amount, margin: '0px 0px -10% 0px' }}
       {...rest}
     >
       {children}

@@ -5,7 +5,7 @@ import { Reveal, Item } from '../lib/motion'
 const UPDATED = '13 July 2026'
 
 /* ---------------- Content primitives ---------------- */
-function Block({ title, children }) {
+export function Block({ title, children }) {
   return (
     <Item as="section" className="mb-10">
       <h2 className="text-heading-sm font-light tracking-tight text-ink mb-3">{title}</h2>
@@ -16,7 +16,7 @@ function Block({ title, children }) {
   )
 }
 
-function List({ items }) {
+export function List({ items }) {
   return (
     <ul className="space-y-2 pl-5 list-disc marker:text-fog">
       {items.map((it, i) => (
@@ -45,7 +45,7 @@ export default function PrivacyPage() {
 
             <Block title="Who we are">
               <p>
-                StraViTech Solutions (&ldquo;StraViTech&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or
+                StraViTech (&ldquo;we&rdquo;, &ldquo;us&rdquo; or
                 &ldquo;our&rdquo;) is a software studio that builds custom web and mobile applications
                 and business systems for manufacturing and engineering companies. We operate the
                 website <a href="https://stravitech.com">stravitech.com</a>. This policy explains what
@@ -161,7 +161,7 @@ export default function PrivacyPage() {
                 contact us at:
               </p>
               <p>
-                <strong>StraViTech Solutions</strong>
+                <strong>StraViTech</strong>
                 <br />
                 Email: <a href="mailto:contact@stravitech.com">contact@stravitech.com</a>
                 <br />

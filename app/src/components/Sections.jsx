@@ -892,6 +892,9 @@ export function Footer() {
         { label: 'About', to: '/about' },
         { label: 'Contact', to: '/contact' },
         { label: 'Privacy Policy', to: '/privacy' },
+        { label: 'Terms & Conditions', to: '/terms' },
+        { label: 'Cancellation & Refund', to: '/refund' },
+        { label: 'Shipping & Delivery', to: '/shipping' },
       ],
     },
   ]
@@ -934,7 +937,7 @@ export function Footer() {
       </div>
       <div className="max-w-container mx-auto px-4 md:px-12 mt-14 pt-8 border-t border-mist">
         <p className="font-mono text-[11px] uppercase tracking-wider text-fog text-center">
-          © 2026 StraViTech Solutions. All rights reserved.
+          © 2026 StraViTech. All rights reserved.
         </p>
       </div>
     </footer>
