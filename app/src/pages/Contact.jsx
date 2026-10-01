@@ -6,7 +6,7 @@ import { CALENDLY, WHATSAPP_HREF } from '../lib/links'
 const channels = [
   { icon: 'event', label: 'Book a call', value: 'Pick a time that suits you', href: CALENDLY, external: true },
   { icon: 'chat', label: 'WhatsApp', value: '+91 97648 30503', href: WHATSAPP_HREF, external: true },
-  { icon: 'mail', label: 'Email us', value: 'connect@stravitech.in', href: 'mailto:connect@stravitech.in' },
+  { icon: 'mail', label: 'Email us', value: 'contact@stravitech.com', href: 'mailto:contact@stravitech.com' },
   { icon: 'schedule', label: 'Response time', value: 'Within one business day' },
 ]
 

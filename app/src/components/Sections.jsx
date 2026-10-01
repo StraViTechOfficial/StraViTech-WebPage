@@ -912,7 +912,7 @@ export function Footer() {
             <a href={WHATSAPP_HREF} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand transition-colors">
               <Icon name="chat" className="text-xl" />
             </a>
-            <a href="mailto:connect@stravitech.in" aria-label="Email" className="w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand transition-colors">
+            <a href="mailto:contact@stravitech.com" aria-label="Email" className="w-10 h-10 rounded-lg bg-card shadow-card flex items-center justify-center text-slate-muted hover:text-indigo-brand transition-colors">
               <Icon name="mail" className="text-xl" />
             </a>
           </div>

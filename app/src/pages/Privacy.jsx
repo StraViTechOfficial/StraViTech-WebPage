@@ -48,7 +48,7 @@ export default function PrivacyPage() {
                 StraViTech Solutions (&ldquo;StraViTech&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo; or
                 &ldquo;our&rdquo;) is a software studio that builds custom web and mobile applications
                 and business systems for manufacturing and engineering companies. We operate the
-                website <a href="https://stravitech.in">stravitech.in</a>. This policy explains what
+                website <a href="https://stravitech.com">stravitech.com</a>. This policy explains what
                 we do with the information you share through this website when you get in touch with
                 us.
               </p>
@@ -144,7 +144,7 @@ export default function PrivacyPage() {
                 then remove it. We take reasonable measures to protect it, though no method of
                 transmission over the internet is completely secure. You can ask us to access,
                 correct or delete the information we hold about you, or to stop contacting you, any
-                time at <a href="mailto:connect@stravitech.in">connect@stravitech.in</a>.
+                time at <a href="mailto:contact@stravitech.com">contact@stravitech.com</a>.
               </p>
             </Block>
 
@@ -163,9 +163,9 @@ export default function PrivacyPage() {
               <p>
                 <strong>StraViTech Solutions</strong>
                 <br />
-                Email: <a href="mailto:connect@stravitech.in">connect@stravitech.in</a>
+                Email: <a href="mailto:contact@stravitech.com">contact@stravitech.com</a>
                 <br />
-                Web: <a href="https://stravitech.in">stravitech.in</a>
+                Web: <a href="https://stravitech.com">stravitech.com</a>
               </p>
               <p className="pt-2">
                 <Link to="/contact">Get in touch →</Link>
