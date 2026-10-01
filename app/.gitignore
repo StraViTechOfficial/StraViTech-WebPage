@@ -25,3 +25,4 @@ dist-ssr
 
 # Generated contact cards (source: contacts/*.json)
 public/c/
+contacts/qr/

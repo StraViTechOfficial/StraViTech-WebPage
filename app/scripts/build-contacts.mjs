@@ -1,9 +1,9 @@
-// Generates digital business cards from contacts/<slug>.json:
-//   public/c/<slug>.vcf             the vCard (3.0) the phone imports
-//   public/c/<slug>.html            page served at /c/<slug> (redirects to the .vcf)
-//   public/c/<slug>/index.html      same page, served at /c/<slug>/
+// Generates contact cards from contacts/<slug>.json:
+//   public/c/<slug>.vcf        vCard 3.0 served at /c/<slug>.vcf (shareable link)
+//   contacts/qr/<slug>.svg|png  with --qr: print-ready QR that holds the vCard
+//                               itself, so scanners show "Add contact" directly
 // Runs before `dev` and `build`. Exits non-zero on any invalid contact so a
-// broken card never deploys. Output is gitignored — edit the JSON, not these.
+// broken card never deploys. Outputs are gitignored — edit the JSON, not these.
 
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, join } from 'node:path'
@@ -12,6 +12,7 @@ import { fileURLToPath } from 'node:url'
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..')
 const SRC = join(ROOT, 'contacts')
 const OUT = join(ROOT, 'public', 'c')
+const QR_OUT = join(SRC, 'qr')
 
 const ALLOWED_KEYS = ['firstName', 'lastName', 'organization', 'title', 'phones', 'emails', 'website', 'address', 'note']
 const ADDRESS_KEYS = ['street', 'city', 'region', 'postalCode', 'country']
@@ -67,7 +68,7 @@ function fold(line) {
 
 const fullName = (c) => [c.firstName, c.lastName].filter(Boolean).join(' ')
 
-function toVCard(c) {
+function toVCard(c, { foldLines = true } = {}) {
   const a = c.address
   const lines = [
     'BEGIN:VCARD',
@@ -83,63 +84,7 @@ function toVCard(c) {
     c.note && `NOTE:${esc(c.note)}`,
     'END:VCARD',
   ].filter(Boolean)
-  return lines.map(fold).join('\r\n') + '\r\n'
-}
-
-// --- landing page ---
-
-const html = (s = '') =>
-  String(s).replace(/[&<>"']/g, (ch) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[ch])
-
-function toPage(slug, c) {
-  const name = fullName(c)
-  const vcf = `/c/${slug}.vcf`
-  const phone = c.phones?.[0]?.number.replace(/[^\d+]/g, '')
-  const email = c.emails?.[0]?.address
-  const role = [c.title, c.organization].filter(Boolean).join(' · ')
-  const links = [
-    phone && `<a href="tel:${html(phone)}">Call</a>`,
-    phone && `<a href="https://wa.me/${html(phone.replace('+', ''))}">WhatsApp</a>`,
-    email && `<a href="mailto:${html(email)}">Email</a>`,
-    c.website && `<a href="${html(c.website)}">Website</a>`,
-  ].filter(Boolean)
-
-  return `<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<title>${html(name)} | StraViTech</title>
-<link rel="icon" type="image/png" href="/assets/fav-icon.png">
-<style>
-  :root { color-scheme: light; }
-  * { box-sizing: border-box; }
-  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px;
-         background: #f5f7fa; color: #001f4b; font: 16px/1.5 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
-  .card { width: 100%; max-width: 380px; background: #fff; border-radius: 16px; padding: 32px 24px; text-align: center;
-          box-shadow: 0 1px 3px rgba(17,26,74,.1), 0 12px 32px rgba(0,0,0,.06); }
-  img { height: 40px; margin-bottom: 20px; }
-  h1 { margin: 0; font-size: 24px; font-weight: 600; letter-spacing: -.3px; }
-  p { margin: 4px 0 24px; color: #5b6b7c; font-size: 15px; }
-  .save { display: block; padding: 14px; border-radius: 10px; background: #013e6b; color: #fff;
-          font-weight: 600; text-decoration: none; }
-  .links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 20px; margin-top: 20px; }
-  .links a { color: #008aaf; text-decoration: none; font-size: 15px; }
-</style>
-</head>
-<body>
-<main class="card">
-  <img src="/assets/stravitech_logo.png" alt="StraViTech">
-  <h1>${html(name)}</h1>
-  ${role ? `<p>${html(role)}</p>` : ''}
-  <a class="save" href="${vcf}" download="${html(name.replace(/\s+/g, '-'))}.vcf">Save contact</a>
-  <div class="links">${links.join('')}</div>
-</main>
-<script>location.replace(${JSON.stringify(vcf)})</script>
-</body>
-</html>
-`
+  return (foldLines ? lines.map(fold) : lines).join('\r\n') + '\r\n'
 }
 
 // --- main ---
@@ -171,11 +116,20 @@ if (failed) process.exit(1)
 
 rmSync(OUT, { recursive: true, force: true })
 mkdirSync(OUT, { recursive: true })
-for (const [slug, c] of contacts) {
-  const page = toPage(slug, c)
-  writeFileSync(join(OUT, `${slug}.vcf`), toVCard(c))
-  writeFileSync(join(OUT, `${slug}.html`), page)
-  mkdirSync(join(OUT, slug), { recursive: true })
-  writeFileSync(join(OUT, slug, 'index.html'), page)
+for (const [slug, c] of contacts) writeFileSync(join(OUT, `${slug}.vcf`), toVCard(c))
+console.log(`✓ contacts: generated ${contacts.length} vCard(s) → /c/{${contacts.map(([s]) => s).join(',')}}.vcf`)
+
+if (process.argv.includes('--qr')) {
+  // Unfolded lines: some scanner apps don't unfold RFC 2426 continuation lines.
+  // Error correction M + 4-module quiet zone is the print standard.
+  const QRCode = (await import('qrcode')).default
+  const opts = { errorCorrectionLevel: 'M', margin: 4, color: { dark: '#000000', light: '#ffffff' } }
+  rmSync(QR_OUT, { recursive: true, force: true })
+  mkdirSync(QR_OUT, { recursive: true })
+  for (const [slug, c] of contacts) {
+    const data = toVCard(c, { foldLines: false })
+    writeFileSync(join(QR_OUT, `${slug}.svg`), await QRCode.toString(data, { ...opts, type: 'svg' }))
+    await QRCode.toFile(join(QR_OUT, `${slug}.png`), data, { ...opts, width: 1200 })
+  }
+  console.log(`✓ contacts: QR codes → contacts/qr/{${contacts.map(([s]) => s).join(',')}}.{svg,png}`)
 }
-console.log(`✓ contacts: generated ${contacts.length} card(s) → /c/{${contacts.map(([s]) => s).join(',')}}`)
