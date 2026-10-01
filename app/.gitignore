@@ -22,7 +22,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-
-# Generated contact cards (source: contacts/*.json)
-public/c/
-contacts/qr/
